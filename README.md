@@ -456,8 +456,10 @@ Translations of the guide are available in the following languages:
   result = 1 \
            - 2
 
-  long_string = 'First part of the long string' \
-                ' and second part of the long string'
+  long_string = <-STR.strip_heredoc
+  				  First part of the long string
+            	  and second part of the long string
+            	  STR
   ```
 
 * <a name="consistent-multi-line-chains"></a>
@@ -520,19 +522,19 @@ Translations of the guide are available in the following languages:
 
   # good
   def send_mail(source)
-    Mailer.deliver(to: 'bob@example.com',
-                   from: 'us@example.com',
+    Mailer.deliver(to:      'bob@example.com',
+                   from:    'us@example.com',
                    subject: 'Important message',
-                   body: source.text)
+                   body:     source.text)
   end
 
   # good (normal indent)
   def send_mail(source)
     Mailer.deliver(
-      to: 'bob@example.com',
-      from: 'us@example.com',
+      to:      'bob@example.com',
+      from:    'us@example.com',
       subject: 'Important message',
-      body: source.text
+      body:     source.text
     )
   end
   ```
