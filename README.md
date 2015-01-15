@@ -460,7 +460,7 @@ Translations of the guide are available in the following languages:
     good - leading `.` (Option A) and trailing `.` (Option B).
 <sup>[[link](#consistent-multi-line-chains)]</sup>
 
-  * **(Option A)** When continuing a chained method invocation on
+  * When continuing a chained method invocation on
     another line keep the `.` on the second line.
 
     ```Ruby
@@ -471,20 +471,6 @@ Translations of the guide are available in the following languages:
     # good - it's immediately clear what's going on the second line
     one.two.three
       .four
-    ```
-
-  * **(Option B)** When continuing a chained method invocation on another line,
-    include the `.` on the first line to indicate that the
-    expression continues.
-
-    ```Ruby
-    # bad - need to read ahead to the second line to know that the chain continues
-    one.two.three
-      .four
-
-    # good - it's immediately clear that the expression continues beyond the first line
-    one.two.three.
-      four
     ```
 
   A discussion on the merits of both alternative styles can be found
